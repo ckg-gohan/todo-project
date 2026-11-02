@@ -7,10 +7,12 @@ todos = [
 def show_todos():
     print("TODO一覧")
     print("優先度（高・中・低）")
-
-    print("未完了のTODO")
+    print()
+    print(f"すべてのTODO（{len(todos)}件）")
     for todo in todos:
-        if not todo["completed"]:
+        if todo["completed"]:
+            print(f'- [完了] {todo["title"]} [{todo["priority"]}]')
+        else:
             print(f'- {todo["title"]} [{todo["priority"]}]')
 
 

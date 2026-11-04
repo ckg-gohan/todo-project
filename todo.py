@@ -6,8 +6,7 @@ todos = [
 
 def show_todos():
     print("TODO一覧")
-    print("優先度（高・中・低）")
-
+    print("状態と優先度：[完了]は完了済み")
     print("未完了のTODO")
     for todo in todos:
         if not todo["completed"]:
